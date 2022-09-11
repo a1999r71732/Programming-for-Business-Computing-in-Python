@@ -48,42 +48,42 @@ btneps = tk.Button(text="每股淨值", height=2, width=8, font=f2, command=lamb
 canvas = tk.Canvas(bg='white', height=500, width=650)
 
 
-def go(event):  # 处理事件，*args表示可变参数
+def go(event):  # 處理事件，*args表示可變参數
     print(comboxyear1.get())
 
 
-def go1(event):  # 处理事件，*args表示可变参数
+def go1(event):  # 處理事件，*args表示可變参數
     print(comboxyear2.get())
 
 
-def go2(event):  # 处理事件，*args表示可变参数
+def go2(event):  # 處理事件，*args表示可變参數
     print(comboxseason1.get())
 
 
-def go3(event):  # 处理事件，*args表示可变参数
+def go3(event):  # 處理事件，*args表示可变参數
     print(comboxseason2.get())
 
 
-comvalue = tk.StringVar()  # 窗体自带的文本，新建一个值
+comvalue = tk.StringVar()  # 窗體自帶的文本，新建一个值
 comvalue1 = tk.StringVar()
 comvalue2 = tk.StringVar()
 comvalue3 = tk.StringVar()
 comboxyear1 = ttk.Combobox(win, width=3, textvariable=comvalue)  # 初始化
 comboxyear1["values"] = ("102", "103", "104", "105", "106", "107", "108")
 comboxyear1.current(0)  # 選擇第一個
-comboxyear1.bind("<<ComboboxSelected>>", go)  # 绑定事件,(下拉列表框被選中时，绑定go()函数)
+comboxyear1.bind("<<ComboboxSelected>>", go)  # 绑定事件,(下拉列表框被選中時，绑定go()函數)
 comboxyear2 = ttk.Combobox(win, width=3, textvariable=comvalue1)  # 初始化
 comboxyear2["values"] = ("102", "103", "104", "105", "106", "107", "108")
 comboxyear2.current(0)  # 選擇第一個
-comboxyear2.bind("<<ComboboxSelected>>", go1)  # 绑定事件,(下拉列表框被選中时，绑定go()函数)
+comboxyear2.bind("<<ComboboxSelected>>", go1)  # 绑定事件,(下拉列表框被選中時，绑定go()函數)
 comboxseason1 = ttk.Combobox(win, width=2, textvariable=comvalue2)  # 初始化
 comboxseason1["values"] = ("01", "02", "03", "04")
 comboxseason1.current(0)  # 選擇第一個
-comboxseason1.bind("<<ComboboxSelected>>", go2)  # 绑定事件,(下拉列表框被選中时，绑定go()函数)
+comboxseason1.bind("<<ComboboxSelected>>", go2)  # 绑定事件,(下拉列表框被選中時，绑定go()函數)
 comboxseason2 = ttk.Combobox(win, width=2, textvariable=comvalue3)  # 初始化
 comboxseason2["values"] = ("01", "02", "03", "04")
 comboxseason2.current(0)  # 選擇第一個
-comboxseason2.bind("<<ComboboxSelected>>", go3)  # 绑定事件,(下拉列表框被選中时，绑定go()函数)
+comboxseason2.bind("<<ComboboxSelected>>", go3)  # 绑定事件,(下拉列表框被選中時，绑定go()函數)
 # 固定在對的位置
 full = tk.NE + tk.SW
 lb.grid(row=1, column=0, sticky=full)
@@ -369,8 +369,8 @@ def figure(ylist1, name1):
     plot2 = plot1.twinx()
     plot2.plot(range(len(month_intervals)), ylist2, color='#8B0000', label=name2, alpha=0.45)
     # 圖例
-    plot2.legend(loc=2, bbox_to_anchor=(0.22, 0.95), prop=font, frameon=False)
-    plot1.legend(loc=2, bbox_to_anchor=(0, 0.95), prop=font, frameon=False)
+    plot2.legend(loc=2, bbox_to_anchor =(0.22, 0.95), prop=font, frameon=False)
+    plot1.legend(loc=2, bbox_to_anchor =(0, 0.95), prop=font, frameon=False)
     # x軸刻度
     plot2.xaxis.set_major_locator(ticker.MultipleLocator(12))
     plot2.set_xticklabels(xlabel(month_intervals))
